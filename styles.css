@@ -43,6 +43,7 @@ main {
   padding:3rem ;
   padding-left: 8rem;
   padding-right: 8rem;
+  padding-bottom:8rem;
 }
 
 .top-bar {
@@ -227,3 +228,4 @@ main {
   background-color: var(--neutral700);
   color: white;
 }
+

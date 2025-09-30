@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body class="dark-theme">
+    <main>
+      <!-- Top bar -->
+      <header class="top-bar dark-theme">
+        <div>
+          <img src="light-logo.svg" alt="Logo" class="top-bar-logo" />
+          <img src="logo.svg" alt="logo" class="top-bar-dark-logo" />
+        </div>
+
+        <div class="theme-toggle">
+          <img
+            src="icon-moon.svg"
+            alt="Toggle theme"
+            class="theme-toggle-dark"
+            onclick="toggleDarkMode()"
+          />
+          <img
+            src="icon-sun.svg"
+            alt="Toggle theme"
+            class="theme-toggle-light"
+            onclick="toggleLightMode()"
+          />
+        </div>
+      </header>
+
+      <!-- Page title + filter buttons -->
+      <section class="extensions-header">
+        <h1>Extensions List</h1>
+        <div class="filters">
+          <button type="button" class="allBtn">All</button>
+          <button type="button" class="activeBtn">Active</button>
+          <button type="button" class="inactiveBtn">Inactive</button>
+        </div>
+      </section>
+
+      <!-- Extensions list -->
+      <section class="extensions-list">
+        <ul>
+          <!-- <li class="extension-item">
+            <div class="extension-item-info">
+              <img
+                src="logo-devlens.svg"
+                alt="DevLens logo"
+                class="extension-logo"
+              />
+              <div class="extension-content">
+                <h2>DevLens</h2>
+                <p>Quickly inspect layouts and visualize element boundaries</p>
+              </div>
+            </div>
+
+            <div class="extension-actions">
+              <button type="button" class="removeBtn">Remove</button>
+              <div class="status-indicator">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </li> -->
+        </ul>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

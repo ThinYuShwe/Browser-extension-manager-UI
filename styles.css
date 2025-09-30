@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+}
+
+:root {
+  --neutral900: hsl(227, 75%, 14%);
+  --neutral800: hsl(226, 25%, 17%);
+  --neutral700: hsl(225, 23%, 24%);
+  --neutral600: hsl(226, 11%, 37%);
+  --neutral300: hsl(0, 0%, 78%);
+  --neutral200: hsl(217, 61%, 90%);
+  --neutral100: hsl(217, 61%, 90%);
+  --neutral0: hsl(200, 60%, 99%);
+  --red400: hsl(3, 86%, 64%);
+  --red500: hsl(3, 71%, 56%);
+  --red700: hsl(3, 77%, 44%);
+  --grey: rgb(173, 173, 173);
+  --fontfamily: "DM Sans", sans-serif;
+  --lightGradient: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+  --darkGradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+body {
+  background: var(--darkGradient);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--fontfamily);
+}
+
+body.light-theme {
+  background: var(--lightGradient);
+}
+
+/* body.dark-theme {
+  background: var(--darkGradient);
+} */
+
+main {
+  padding:3rem ;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.top-bar {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--neutral800);
+  padding: 1rem;
+  margin-bottom: 3.5rem;
+  border-radius: 1rem;
+}
+
+.top-bar.light-theme {
+  background-color: white;
+}
+
+.top-bar.dark-theme {
+  background-color: var(--neutral800);
+}
+
+.top-bar-logo {
+  width: 8rem;
+}
+
+.top-bar-dark-logo {
+  display: none;
+  width: 8rem;
+}
+
+.theme-toggle {
+  cursor: pointer;
+}
+
+.theme-toggle-light {
+  display: block;
+}
+
+.theme-toggle-dark {
+  display: none;
+}
+
+.extensions-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.extensions-header h1 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filters button {
+  padding: 0.4rem 1.5rem;
+  border-radius: 2rem;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.extensions-list ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 1rem;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem; */
+}
+
+
+
+.extension-item {
+  padding: 1.2rem;
+  background-color: var(--neutral900);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.extension-item.light-theme {
+  background-color: white;
+}
+
+.extension-item-info {
+  color: white;
+  list-style: none;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+
+.extension-logo {
+  width: 3.4rem;
+}
+
+.extension-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.extension-content h2 {
+  font-size: 1.3rem;
+}
+
+.extension-item.light-theme h2 {
+  color: black;
+}
+
+.extension-content p {
+  color: var(--grey);
+  line-height: 1.3rem;
+}
+
+.extension-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.removeBtn {
+  padding: 0.4rem 1rem;
+  background-color: var(--neutral900);
+  color: white;
+  border-radius: 1rem;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.status-indicator {
+  background-color: var(--grey);
+  width: 2rem;
+  height: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.status-indicator-active {
+  justify-content: flex-end;
+  background-color: var(--red400);
+}
+
+/* Active filter button in light theme */
+.filters button.active.light-theme {
+  background-color: var(--red400);
+  color: black;
+}
+
+/* Active filter button in dark theme */
+.filters button.active.dark-theme {
+  background-color: var(--red400);
+  color: white;
+}
+
+.filters button.light-theme {
+  background-color: white;
+  color: black;
+}
+
+.filters button.dark-theme {
+  background-color: var(--neutral700);
+  color: white;
+}
